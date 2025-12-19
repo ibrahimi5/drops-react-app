@@ -1,0 +1,33 @@
+#navbar a {
+    font-family: cursive;
+    color: purple;    
+    text-decoration: none;
+}
+#navbar a:active{
+    color: rgb(53, 35, 221);
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+}
+#navbar {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.user-name {
+    font-family: cursive;  
+    color: purple;          
+    text-decoration: none;
+    cursor: default;
+    display: inline-block;
+}

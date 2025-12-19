@@ -1,0 +1,23 @@
+#category-list{
+    color:green;
+}
+
+#category-list p{
+    font-size: 20px;
+
+}
+
+#category-list a{
+    text-decoration: none;
+    color:inherit;
+
+}
+
+#category-list a:hover{
+    text-decoration: underline;
+    
+}
+
+h1{
+    text-align: center;
+}

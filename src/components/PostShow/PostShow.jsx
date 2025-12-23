@@ -1,7 +1,7 @@
 import "./PostShow.css"
 import { useState, useEffect , useContext} from 'react'
-import {postShow } from '../../services/posts'
-import { Link,useParams } from 'react-router'
+import {postShow, postDelete } from '../../services/posts'
+import { Link,useParams, useNavigate } from 'react-router'
 import { UserContext } from "../../contexts/UserContext"
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -14,6 +14,7 @@ const PostShow = () => {
   dayjs.extend(relativeTime);
   const { postId } = useParams()
   const { user} = useContext(UserContext)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const getData = async () => {
@@ -28,6 +29,27 @@ const PostShow = () => {
     }
     getData()
   }, [])
+
+  const deletePost = async () => {
+    try {
+        await postDelete(postId)
+        navigate('/')
+    } catch (error) {
+      console.log(error)
+      if (error.response.status === 500) {
+        return setErrorData({ message: 'Something went wrong. Please try again.' })
+      }
+      setErrorData(error.response.data)
+    }
+  }
+
+  const editPost = () => {
+    try {
+      navigate(`/posts/${postId}/edit`)
+    } catch (error) {
+        console.log('something went wrong trying to navigate to the edit page')
+    }
+  }
 
   const createdAt = new Date(post.created_at)
 
@@ -60,8 +82,8 @@ const PostShow = () => {
       <>
         {authorised() && (
           <div id="buttons-container">
-            <button className="action-button" id="edit-button" >Edit</button>
-            <button className="action-button" id="delete-button" >Delete</button>
+            <button className="action-button" id="edit-button" onClick={editPost} >Edit</button>
+            <button className="action-button" id="delete-button" onClick={deletePost} >Delete</button>
           </div>
         )}
 

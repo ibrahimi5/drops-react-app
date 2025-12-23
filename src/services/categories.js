@@ -9,5 +9,5 @@ export const categoryIndex = () => {
 }
 
 export const postByCategories = (categoryId) => {
-  return api.get(`/${categoryId}/posts`)
+  return api.get(`/${categoryId}/posts/`)
 }

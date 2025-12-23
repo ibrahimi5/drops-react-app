@@ -20,13 +20,13 @@ export const postShow = (postId) => {
 }
 
 export const postUpdate = (postId, formData) => {
-  return api.put(`/${postId}`, formData, {
+  return api.put(`/${postId}/`, formData, {
     headers: {Authorization: `Bearer ${getToken()}`}
   })
 }
 
 export const postDelete = (postId) => {
-  return api.delete(`/${postId}`, {
+  return api.delete(`/${postId}/`, {
     headers: {Authorization: `Bearer ${getToken()}`}
   })
 }

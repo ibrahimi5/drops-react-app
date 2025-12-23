@@ -11,7 +11,7 @@ import CategoriesIndex from './components/CategoriesIndex/CategoriesIndex'
 import PostsByCategories from './components/PostsByCategories/PostsByCategories'
 import PostShow from './components/PostShow/PostShow'
 import PostCreate from './components/PostCreate/PostCreate'
-// import HootUpdate from './components/HootUpdate/HootUpdate'
+import PostUpdate from './components/PostUpdate/PostUpdate'
 // import NotFound from './components/NotFound/NotFound'
 
 const App = () => {
@@ -27,7 +27,7 @@ const App = () => {
             <Route path="/categories/:categoryId/posts" element={<PostsByCategories />} />
             <Route path="/posts/:postId" element={<PostShow />} />
             <Route path="/posts/new" element={<PostCreate />} />
-            {/* <Route path="*" element={<NotFound />} /> */}
+            <Route path="/posts/:postId/edit" element={<PostUpdate />} />
           </Routes>
       </main>
     </>

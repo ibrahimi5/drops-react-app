@@ -35,7 +35,7 @@ const CategoriesIndex = () => {
           : <ul id="category-list">
             {categories.map(category => {
                 return(
-                  <p><Link to={`/categories/${category.id}/posts`}>{category.name}</Link></p>
+                  <p key={category.id} ><Link to={`/categories/${category.id}/posts`}>{category.name}</Link></p>
             )
           })}
            </ul>

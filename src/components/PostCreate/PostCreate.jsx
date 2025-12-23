@@ -30,7 +30,7 @@ const PostCreate = () => {
       // Consume the service function (API)
       const { data } = await postCreate(formData)
       console.log("Post created")
-      //navigate(`/posts/${data._id}`)
+      navigate(`/posts/${data._id}`)
     } catch (error) {
       console.log(error)
       if (error.response.status === 500) {

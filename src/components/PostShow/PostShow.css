@@ -1,0 +1,16 @@
+#post-show:hover{
+     background-color:  rgb(198, 220, 255);
+}
+
+#date-time{
+    display:flex;
+    justify-content: space-between;
+}
+
+#time{
+    opacity: 0.8;
+}
+
+#date{
+    opacity: 0.8
+}

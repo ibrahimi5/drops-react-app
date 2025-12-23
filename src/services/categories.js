@@ -1,5 +1,4 @@
 import axios from 'axios'
-import CategoriesIndex from '../components/CategoriesIndex/CategoriesIndex'
 
 const api = axios.create ({
     baseURL: `${import.meta.env.VITE_API_URL}/categories`

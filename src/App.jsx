@@ -9,6 +9,7 @@ import SignIn from './components/SignIn/SignIn'
 import SignUp from './components/SignUp/SignUp'
 import CategoriesIndex from './components/CategoriesIndex/CategoriesIndex'
 import PostsByCategories from './components/PostsByCategories/PostsByCategories'
+import PostShow from './components/PostShow/PostShow'
 // import HootCreate from './components/HootCreate/HootCreate'
 // import HootUpdate from './components/HootUpdate/HootUpdate'
 // import NotFound from './components/NotFound/NotFound'
@@ -24,9 +25,9 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/categories" element={<CategoriesIndex />} />
             <Route path="/categories/:categoryId/posts" element={<PostsByCategories />} />
-            {/* <Route path="/hoots/new" element={<HootCreate />} />
-            <Route path="/hoots/:hootId/edit" element={<HootUpdate />} />
-            <Route path="*" element={<NotFound />} /> */}
+            <Route path="/posts/:postId" element={<PostShow />} />
+            <Route path="/posts/new" element={<PostCreate />} />
+            {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
       </main>
     </>

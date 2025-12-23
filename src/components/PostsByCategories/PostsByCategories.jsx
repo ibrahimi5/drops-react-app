@@ -6,7 +6,6 @@ import { UserContext } from "../../contexts/UserContext"
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
-
 const PostsByCategories = () => {
   
   const [posts, setPosts] = useState([])
@@ -41,7 +40,7 @@ const PostsByCategories = () => {
                   <Link to={`/posts/${post.id}`}>
                     <div className="post-header">
                         <p className="post-username">{post.owner.username}</p>
-                        <p className="post-date">
+                        <p className="post-timeAgo">
                             {dayjs(post.created_at).fromNow()}
                         </p>
                     </div>

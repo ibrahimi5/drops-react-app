@@ -38,7 +38,7 @@ const Home = () => {
                   <Link to={`/posts/${post.id}`}>
                     <div className="post-header">
                         <p className="post-username">{post.owner.username}</p>
-                        <p className="post-date">
+                        <p className="post-timeAgo">
                             {dayjs(post.created_at).fromNow()}
                         </p>
                     </div>

@@ -6,7 +6,7 @@ const api = axios.create({
 })
 
 export const postCreate = (formData) => {
-  return api.post('', formData, {
+  return api.post('/', formData, {
     headers: {Authorization: `Bearer ${getToken()}`}
   })
 }
@@ -27,6 +27,12 @@ export const postUpdate = (postId, formData) => {
 
 export const postDelete = (postId) => {
   return api.delete(`/${postId}`, {
+    headers: {Authorization: `Bearer ${getToken()}`}
+  })
+}
+
+export const commentCreate = (postId, formData) => {
+  return api.post(`/${postId}/comments`, formData, {
     headers: {Authorization: `Bearer ${getToken()}`}
   })
 }

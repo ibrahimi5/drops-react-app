@@ -1,0 +1,46 @@
+#comment-div {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#comment-area {
+    flex: 4;
+    font-family: 'Segoe UI', sans-serif;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+#make-comment-button {
+    flex: 1
+}
+
+#old-comment-box {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border: 1px solid grey;
+    border-radius: 8px;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: rgba(244, 219, 187, 0.171);
+}
+
+#comment-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#old-comment-box p{
+    font-size: 1.6rem;
+}
+#comments-list-box p {
+    font-size: 1.6rem;
+}

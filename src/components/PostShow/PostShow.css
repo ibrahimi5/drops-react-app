@@ -14,3 +14,22 @@
 #date{
     opacity: 0.8
 }
+
+#buttons-container {
+    display:flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 8%;
+    
+}
+
+#edit-button{
+    height: 45px;
+    width: 25%;
+    background-color: rgb(255, 165,0 );
+}
+
+#delete-button{
+    width: 25%;
+    background-color: rgba(225, 26, 26, 0.447);
+}

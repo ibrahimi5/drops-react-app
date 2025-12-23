@@ -56,5 +56,16 @@ form{
 
 .error-message {
     color: red;
-    font-size: 2rem;
+    font-size: 1.6rem;
+}
+
+textarea {
+    width: 500px;           /* Fixed width */
+    min-height: 100px;      /* Minimum height */
+    resize: vertical;       /* Allow only vertical resizing */
+    overflow: auto;         /* Scroll if content overflows */
+}
+
+.create-update{
+    max-width: 550px;
 }

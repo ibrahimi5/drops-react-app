@@ -21,7 +21,11 @@ const PostsByCategories = () => {
         setPosts(data)
       } catch (error) {
         console.log(error)
+        if (error.response.status === 500) {
+          return setErrorData({ message: 'Something went wrong. Please try again.' })
+      }
         setErrorData(error.response.data)
+        
       }
     }
     getData()

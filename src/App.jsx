@@ -10,7 +10,7 @@ import SignUp from './components/SignUp/SignUp'
 import CategoriesIndex from './components/CategoriesIndex/CategoriesIndex'
 import PostsByCategories from './components/PostsByCategories/PostsByCategories'
 import PostShow from './components/PostShow/PostShow'
-// import HootCreate from './components/HootCreate/HootCreate'
+import PostCreate from './components/PostCreate/PostCreate'
 // import HootUpdate from './components/HootUpdate/HootUpdate'
 // import NotFound from './components/NotFound/NotFound'
 

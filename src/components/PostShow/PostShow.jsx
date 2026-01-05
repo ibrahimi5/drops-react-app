@@ -66,9 +66,11 @@ const PostShow = () => {
   
 
   const authorised = () => {
-    if (user.id === post?.owner?.id) {
-      return true
+    if (user) {
+      if (user.id === post?.owner?.id) {
+        return true
     } else {return false}
+  }
 
   }
 
